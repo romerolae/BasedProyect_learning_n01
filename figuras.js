@@ -35,7 +35,7 @@ function areaTriangulo(base, altura){
 }
 
 
-function perimetroTriangulo (lado1, lado2, base){
+function perimetroTriangulo(lado1, lado2, base){
    return  lado1 + lado2 + base;
 }
 // console.log(`Los lados del triangulo miden: ${ladoTriangulo1} cm, ${ladoTriangulo2} cm, ${baseTriangulo} cm`);
@@ -87,4 +87,57 @@ function perimetroRomboide(base, altura){
 
 console.groupEnd()
 
+// Aqui interactuaramos con html
 
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("inputCuadrado")
+    const value = input.value;
+
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+}
+
+function calcularAreaCuadrado(){
+    const input = document.getElementById("inputCuadrado")
+    const value = input.value;
+
+    const area = areaCuadrado(value);
+    alert(area);
+}
+
+function calcularPerimetroTriangulo(){
+    const input1= document.getElementById("inputBaseTriangulo")
+    const value1 = parseInt(input1.value);
+
+    const input2 = document.getElementById("inputLado1Triangulo")
+    const value2 = parseInt(input2.value);
+    
+    const input3 = document.getElementById("inputLado2Triangulo")
+    const value3 = parseInt(input3.value);
+
+    const perimetro = perimetroTriangulo(value3, value2, value1 );
+    alert (perimetro);
+}
+
+
+function calcularAreaTriangulo(){
+    const input1= document.getElementById("inputBaseTriangulo")
+    const value1 = parseInt(input1.value);
+
+    const input2 = document.getElementById("inputAlturaTriangulo")
+    const value2 = parseInt(input2.value);
+    
+    const area = areaTriangulo(value1,value2 );
+    alert (area);
+
+}
+
+
+
+
+
+// const inputAlturaTriangulo = document.getElementById("inputAlturaTriangulo")
+//     const alturaTriangulo = inputAlturaTriangulo.alturaTriangulo;
+
+// const inputBaseTriangulo = document.getElementById("inputBaseTriangulo")
+//     const baseTriangulo = inputBaseTriangulo.baseTriangulo;
